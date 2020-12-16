@@ -77,7 +77,7 @@ public class ContaBanco {
 
 
     }
-    
+
     public void pagarMensal(){
             double valor=0;
         if(isStatus()){
