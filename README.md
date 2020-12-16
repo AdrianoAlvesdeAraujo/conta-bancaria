@@ -14,13 +14,22 @@ programa em JAVA de um Banco. Temos duas classes, sendo  a principal, a classe *
 
 #### Métodos:
 
+
+
+- contrutor;
 - abrirConta();
 - fecharConta();
 - pagarMensal();
 - sacar();
 - depositar();
 - status();
-- getter e setter de todos os atributos;
+- getter() e setter();
+
+
+
+Quando inicializo a classe **contaBanco** na classe principal, no método construtor, já atribuo como *false* o atributo *status* e atribuo o valor *0* ao atributo *saldo*.
+
+
 
 
 
