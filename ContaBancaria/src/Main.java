@@ -1,8 +1,8 @@
 public class Main {
 
     public static void main(String[] args) {
-        ContaBanco c=new ContaBanco("cc", "Creuza", 1001);
-        ContaBanco c1=new ContaBanco("cp", "Jubileu", 1002);
+        Banco c=new ContaBanco();
+        Banco c1=new ContaBanco();
 
 
         c.abrirConta();
@@ -16,6 +16,9 @@ public class Main {
         c1.depositar(300.00);
         c1.pagarMensal();
         c1.sacar(150.00);
+        c1.status();
+
+        c1.fecharConta();
         c1.status();
 
     }

@@ -1,14 +1,14 @@
-public class ContaBanco {
+public class ContaBanco implements Banco {
     public int numConta;
     protected String tipo;
     private String dono;
     private double saldo = 0.0D;
     private boolean status = false;
 
-    public ContaBanco(String tipoConta, String nomeDono, int numConta) {
-        this.tipo = tipoConta;
-        this.dono = nomeDono;
-        this.numConta = numConta;
+    public ContaBanco() {
+
+        setSaldo(0.00D);
+        setStatus(false);
     }
 
     public void abrirConta() {
