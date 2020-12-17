@@ -2,9 +2,9 @@
 
 programa em JAVA de um Banco. Temos duas classes, sendo  a principal, a classe **Main** e a classe **ContaBanco** e uma *interface* **Banco** implementando o conceito de encapsulamento. 
 
-### Classe ContaBanco
+#### Classe ContaBanco
 
-#### Atributos:
+##### Atributos:
 
 - numConta - tipo  inteiro;
 - tipo - tipo String
@@ -12,9 +12,7 @@ programa em JAVA de um Banco. Temos duas classes, sendo  a principal, a classe *
 - dono - tipo String;
 - status - tipo boolean;
 
-#### Métodos:
-
-
+##### Métodos:
 
 - contrutor;
 - abrirConta();
@@ -25,9 +23,9 @@ programa em JAVA de um Banco. Temos duas classes, sendo  a principal, a classe *
 - status();
 - getter() e setter();
 
-## Interface Banco
+#### Interface Banco
 
-#### Métodos abstratos:
+##### Métodos abstratos:
 
 - abrirConta();
 - fecharConta();
@@ -35,10 +33,6 @@ programa em JAVA de um Banco. Temos duas classes, sendo  a principal, a classe *
 - sacar();
 - depositar();
 - status();
-
-
-
-
 
 Quando inicializo a classe **contaBanco** na classe principal, no método construtor, já atribuo como *false* o atributo *status* e atribuo o valor *R$0.00* ao atributo *saldo*.
 
