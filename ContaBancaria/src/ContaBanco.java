@@ -4,8 +4,12 @@ public class ContaBanco implements Banco {
     private String dono;
     private double saldo = 0.0D;
     private boolean status = false;
+    private int count;
 
-    public ContaBanco() {
+    public ContaBanco(String nome,String tipo, int numero) {
+        this.tipo=tipo;
+        this.dono=nome;
+        this.numConta=numero;
 
         setSaldo(0.00D);
         setStatus(false);
@@ -26,6 +30,8 @@ public class ContaBanco implements Banco {
     }
 
     public void fecharConta() {
+
+        this.count++;
         if (this.saldo < 0.0D) {
             System.out.println("Existe débito para esta conta, não é possível fechar conta");
         } else if (this.saldo > 0.0D) {
@@ -37,6 +43,7 @@ public class ContaBanco implements Banco {
     }
 
     public void depositar(double valorParaDepositar) {
+        this.count++;
         if (this.isStatus()) {
             this.saldo += valorParaDepositar;
             this.setSaldo(this.saldo);
@@ -47,6 +54,7 @@ public class ContaBanco implements Banco {
     }
 
     public void sacar(double valorParaSacar) {
+        this.count++;
         if (this.isStatus()) {
             if (this.saldo > valorParaSacar) {
                 this.saldo -= valorParaSacar;
@@ -61,6 +69,7 @@ public class ContaBanco implements Banco {
     }
 
     public void pagarMensal() {
+        this.count++;
         double valor = 0.0D;
         if (this.isStatus()) {
             if (this.getTipo() == "cc") {
@@ -74,6 +83,13 @@ public class ContaBanco implements Banco {
         } else {
             System.out.println("Não existe essa conta");
         }
+        if(count == 10){
+            valor=5.00;
+            this.saldo -= valor;
+
+            setSaldo(this.saldo);
+            count=0;
+        }
 
     }
 
@@ -85,6 +101,14 @@ public class ContaBanco implements Banco {
         System.out.println("O saldo da conta é: " + this.getSaldo());
         System.out.println("A conta está ativa?: " + this.isStatus());
         System.out.println("\n");
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 
     public int getNumConta() {

@@ -1,8 +1,8 @@
 public class Main {
 
     public static void main(String[] args) {
-        Banco c=new ContaBanco();
-        Banco c1=new ContaBanco();
+        Banco c=new ContaBanco("Joesley","cc", 1212);
+        Banco c1=new ContaBanco("Adriano","cp",1111);
 
 
         c.abrirConta();
